@@ -69,7 +69,8 @@
                                                 <tbody>
                                                     @foreach($orderDetail as $item)
 
-
+                                                        @foreach($item->order $o)
+            <?php dd($o)?>
                                                 <tr class="first odd">
                                                     <td><a href="{{URL::to('account/orders', ['id' => $item['id']])}}" style="color: #2F80ED;">#{{$item['id']}}</a></td>
                                                     <td>{{$item['created_at']}}</td>
@@ -96,11 +97,10 @@
 
                                                     </td>
                                                     <td>
-
-                                                        @if(@empty($item['orders'][0]['total']))
+                                                        @if(@empty($item->orders[0]['total']))
                                                             <a style="color: white;font-size: 14px" class="btn btn-danger btn-xs">Chưa chuyển</a>
                                                         @else
-                                                            <a style="color: white" class="btn btn-info ">{{ $item['orders'][0]['status'] }}</a>
+                                                            <a style="color: white" class="btn btn-info ">{{ $item['orders']->status}}</a>
 {{--                                                            <span class="price label label-default"> </span>--}}
                                                         @endif
 
@@ -117,7 +117,7 @@
 {{--                                                        @endif--}}
 {{--                                                    </td>--}}
                                                 </tr>
-
+                                                        @endforeach
                                                     @endforeach
                                                 </tbody>
 

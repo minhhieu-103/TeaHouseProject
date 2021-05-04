@@ -100,6 +100,7 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/creativeorange/gravatar" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/laravel/browser-kit-testing" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/hardevine/shoppingcart" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor/muhamadrezaar/highcharts" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />

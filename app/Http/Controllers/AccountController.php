@@ -33,6 +33,8 @@ class AccountController extends Controller
         $auth =Auth::guard('loyal_customer')->user()->email;
 //        $auth =Auth::guard('loyal_customer')->user()->email;
         $orderDetail = LoyalCustomer::with('orders')->where('email', $auth)->orderBy('created_at', 'desc')->get()->toArray();
+        $arr_Order = $orderDetail->orders;
+        dd($arr_Order);
 
 
 

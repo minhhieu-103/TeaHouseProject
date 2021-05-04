@@ -95,6 +95,7 @@
       <path value="$PROJECT_DIR$/vendor/creativeorange/gravatar" />
       <path value="$PROJECT_DIR$/vendor/laravel/browser-kit-testing" />
       <path value="$PROJECT_DIR$/vendor/hardevine/shoppingcart" />
+      <path value="$PROJECT_DIR$/vendor/muhamadrezaar/highcharts" />
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

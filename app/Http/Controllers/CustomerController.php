@@ -20,7 +20,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $customers = LoyalCustomer::with('orders')->paginate(6);
+        $customers = LoyalCustomer::with('orders')->paginate(12);
 
 //        dd($customers);
         $inventory = Order::getInventory();

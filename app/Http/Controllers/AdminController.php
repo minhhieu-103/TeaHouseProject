@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\LoyalCustomer;
 use App\Model\Order;
+use App\Model\OrderDetail;
 use App\Model\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -24,11 +25,20 @@ class AdminController extends Controller
         // Tổng số lượng sản phẩm
         $products = Product::all()->where('id')->count();
         // danh sách 10 đơn hàng gần nhất
+        $detail = Order::all()->sum('total');
+        // danh sách 10 đơn hàng gần nhất
+        $listcustomers = LoyalCustomer::with('orders')->orderByDesc('id')->limit(10)->get();
 
+        //danh sach so san pham xem nhieu
+        $topProduct = Product::orderByDesc('id')->limit(10)->get();
+//        dd($detail);
         $viewData =[
             'totalUser' => $customers,
             'totalProducts' => $products,
-            'totalOrders' =>$order
+            'totalOrders' =>$order,
+            'totalPrice' => $detail,
+            'listCustomer' =>$listcustomers,
+            'topProducts' =>$topProduct
         ];
 //        dd($viewData['totalUser']);
         return  view('adminlte::home',compact('viewData'));
