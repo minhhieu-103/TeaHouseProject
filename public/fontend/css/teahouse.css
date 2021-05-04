@@ -215,7 +215,7 @@ ul#cart-sidebar {
     background: #fff;
     padding: 0;
     text-align: left;
-    box-shadow: 0 0 15px -5px rgb(0 0 0 / 40%);
+    box-shadow: 0 0 15px -5px rgb(0 0 0 ,40%);
     z-index: 10000;
     border-radius: 3px;
 }
@@ -442,7 +442,7 @@ ul.item_small li a {
     background-repeat: no-repeat;
     width: 160px;
     height: 27px;
-    top: 2px;
+    top: -5px;
     left: 50%;
     transform: translate(-50%, -50%);
     -webkit-transform: translate(-50%, -50%);
@@ -1127,8 +1127,11 @@ footer.footer .widget-ft .content-contact a {
 .social a .fab,
 .getmail .social a .fas {
     color: #4d8a54;
+    padding: 6px;
 }
-
+a {
+    text-decoration: none !important;
+}
 .widget-ft .time_work .input-group .btn-default {
     font-weight: bold;
     font-size: 16px;

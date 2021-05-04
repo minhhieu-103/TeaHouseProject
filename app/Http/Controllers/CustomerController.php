@@ -20,23 +20,26 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $customers =LoyalCustomer::paginate(6);
+        $customers = LoyalCustomer::with('orders')->paginate(6);
+
+//        dd($customers);
         $inventory = Order::getInventory();
 
         return view('adminlte::customers.main',compact('customers','inventory'));
 
     }
 
-    public  function getAction($action,$id){
-        $customers = LoyalCustomer::find($id);
-        $inventory = Order::getInventory();
-        if($customers){
-            switch ($action){
-                case $inventory['2'];
-                dd('4');
-                break;
-            }
-        }
+    public  function getAction(Request $request,$id){
+
+
+        Order::where('id',$id)->update([
+            'status'=> $request->status
+        ]);
+
+        //$customers =LoyalCustomer::paginate(6);
+        //$inventory = Order::getInventory();
+        //return view('adminlte::customers.main',compact('customers','inventory'));
+        return redirect()->back();
 
     }
     /**

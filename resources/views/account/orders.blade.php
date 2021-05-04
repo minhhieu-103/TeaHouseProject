@@ -69,6 +69,7 @@
                                                 <tbody>
                                                     @foreach($orderDetail as $item)
 
+
                                                 <tr class="first odd">
                                                     <td><a href="{{URL::to('account/orders', ['id' => $item['id']])}}" style="color: #2F80ED;">#{{$item['id']}}</a></td>
                                                     <td>{{$item['created_at']}}</td>
@@ -104,6 +105,17 @@
                                                         @endif
 
                                                     </td>
+{{--                                                    <td>--}}
+{{--                                                        @if($o->status == 1)--}}
+{{--                                                            <span class="label label-primary">Tiếp nhận</span>--}}
+{{--                                                        @elseif($o->status == 2 )--}}
+{{--                                                            <span class="label label-info">Đang vận chuyện</span>--}}
+{{--                                                        @elseif($o->status == 3 )--}}
+{{--                                                            <span class="label label-success">Đã bàn giao</span>--}}
+{{--                                                        @else--}}
+{{--                                                            <span class="label label-danger">Hủy</span>--}}
+{{--                                                        @endif--}}
+{{--                                                    </td>--}}
                                                 </tr>
 
                                                     @endforeach

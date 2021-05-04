@@ -18,10 +18,10 @@
                             <div class="getmail section">
                                 <div class="social">
 
-                                    <a class="tw" href="https://twitter.com" title="Theo dõi trên Twitter"><i class="fab fa-twitter"></i></a>
+                                    <a class="tw" href="https://instagram.com/h2k.69" title="Theo dõi trên Twitter"><i class="fab fa-instagram"></i></a>
 
 
-                                    <a class="fb" href="https://www.facebook.com/sapowebvietnam/" title="Theo dõi trên Facebook"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="fb" href="https://www.facebook.com/0609nmh/" title="Theo dõi trên Facebook"><i class="fab fa-facebook-f"></i></a>
 
 
                                     <a class="pi" href="https://www.pinterest.com/" title="Theo dõi trên Pinterest"><i class="fab fa-pinterest-p"></i></a>
@@ -57,13 +57,13 @@
                                     <i class="fas fa-phone"></i>
                                     <span>
                                                     <b>Hotline đặt bàn: </b>
-                                                    <a href="tell:18006750">
+                                                    <a href="">
                                                         1800 6750
                                                     </a>
                                                 </span>
                                     <span>
                                                 <b>Hotline giao hàng:</b>
-                                                    <a href="tell:18006750">
+                                                    <a href="">
                                                         1800 6750
                                                     </a>
                                                 </span>
@@ -114,12 +114,12 @@
                     <div class="row tablet">
                         <div id="copyright" class="col-lg-12 a-center fot_copyright">
                                 <span class="wsp">
-									<span class="mobile">© Bản quyền thuộc về <b>Cafein Team</b>
+									<span class="mobile">© Bản quyền thuộc về <b>MH Team</b>
 										<span class="dash hidden-xs">|</span>
                                 </span>
                                 <span class="opacity1">Cung cấp bởi</span>
 
-                                <a href="https://www.sapo.vn/?utm_campaign=cpn:site_khach_hang-plm:footer&amp;utm_source=site_khach_hang&amp;utm_medium=referral&amp;utm_content=fm:text_link-km:-sz:&amp;utm_term=&amp;campaign=site_khach_hang" rel="nofollow" title="Sapo" target="_blank">Sapo</a>
+                                <a href="#">BINHANCITY</a>
 
                                 </span>
                         </div>

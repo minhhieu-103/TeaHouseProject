@@ -26,8 +26,9 @@
     </section>
 
 
-    <div class="add"style="padding: 12px">
-        <button class="btn btn-success" title="add news"><a href="{{URL::to('/admin/customers/create')}}"><i class="fas fa-plus"></i> Add Products</a></button>
+    <div class="add" style="padding: 12px">
+        <button class="btn btn-success" title="add news"><a href="{{URL::to('/admin/customers/create')}}"><i
+                    class="fas fa-plus"></i> Add Products</a></button>
     </div>
     <table class="table">
         <thead>
@@ -48,47 +49,58 @@
         @forelse($customers as $ct)
 
             <tr>
-                @foreach($ct->orders as $c)
-                <th class="stt" scope="row">{{ $stt }}</th>
-                <td>{{$ct->name }}<br>
+                @foreach($ct->orders as $o)
+                    <th class="stt" scope="row">{{ $stt }}</th>
+                        <td>{{$ct->name }}<br>
                         {{ $ct->email }}<br>
                         {{ $ct->address }}<br>
                         {{ $ct->phone }}
 
-                </td>
+                    </td>
+                    <td>{{number_format($o->total)}} đ</td>
 
-                <td>{{number_format($c->total)}} đ</td>
+                    <td>
+                            @if($o->status == 1)
+                                <span class="label label-primary">Tiếp nhận</span>
+                            @elseif($o->status == 2 )
+                                <span class="label label-info">Đang vận chuyện</span>
+                            @elseif($o->status == 3 )
+                                <span class="label label-success">Đã bàn giao</span>
+                            @else
+                                <span class="label label-danger">Hủy</span>
+                            @endif
+                   </td>
+                    <td>{{$ct->created_at}}</td>
+                    <td>
 
-                <td><span class="label label-default" style="text-transform: uppercase">
-                        {{$c->status}}
-                    </span></td>
-                <td>{{$ct->created_at}}</td>
-                <td>
+                        {{--                <td>{{number_format($orderDetail->total)}}</td>--}}
 
-{{--                <td>{{number_format($orderDetail->total)}}</td>--}}
-
-                    <button class="btn  btn-info js-preview"><a href="{{ route('admin.customers.show', ['id' => $ct->id]) }}" style="color: white;text-decoration: none"><i class="fas fa-eye" style="color: white"></i> View</a></button>
-{{--                    <button class="btn btn-info"><a href="{{ route('admin.customers.show', ['id' => $ct->id]) }}"><i class="fas fa-eye" style="color: white"></i></a></button>--}}
-                    <form class="btn" action="{{ route('admin.customers.destroy', ['id' => $ct->id]) }}" method="post">
-                        @csrf
-                        @method('DELETE')
-
-                        <button class="btn btn-danger">
-                            <i class="fas fa-trash-alt" style="color: white"> Xóa</i>
+                        <button class="btn  btn-info js-preview"><a
+                                href="{{ route('admin.customers.show', ['id' => $ct->id]) }}"
+                                style="color: white;text-decoration: none"><i class="fas fa-eye"
+                                                                              style="color: white"></i> View</a>
                         </button>
-                    </form>
-                    <form name="frmSearch" id="addsubmit" action="{{route('admin.customers.update' ,['id' => $ct->id])}}" method="put" >
-                        @csrf
-                        <select name="level" id="changer" class="input-sm select2" >
-                            @foreach($inventory as $key => $val)
-                                <option {{\Request::get('get') == $key ? "selected" : ""}} value="{{ $key }}">{{ __('trạng thái') }} - {{ $val }}</option>
-                            @endforeach
-                        </select>
-                    </form>
-                </td>
+                        {{--                    <button class="btn btn-info"><a href="{{ route('admin.customers.show', ['id' => $ct->id]) }}"><i class="fas fa-eye" style="color: white"></i></a></button>--}}
+                        <form class="btn" action="{{ route('admin.customers.destroy', ['id' => $ct->id]) }}"
+                              method="post">
+                            @csrf
+                            @method('DELETE')
 
+                            <button class="btn btn-danger">
+                                <i class="fas fa-trash-alt" style="color: white"> Xóa</i>
+                            </button>
+                        </form>
+                        <form name="frmSearch" id="addsubmit"
+                              action="{{URL::to('customers/action' ,['id' => $o->id])}}" method="get">
 
-
+                            <select name="status" id="changer" class="input-sm select2 changer">
+                                <option value="0" hidden>Chọn trạng thái</option>
+                                @foreach($inventory as $key => $val)
+                                    <option value="{{ $key }}">{{ $val }}</option>
+                                @endforeach
+                            </select>
+                        </form>
+                    </td>
 
 
             </tr>

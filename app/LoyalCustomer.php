@@ -21,7 +21,7 @@ class LoyalCustomer extends Authenticatable
     ];
     public function orders()
     {
-        return $this->hasMany('App\Model\Order', 'loyal_customers_id');
+        return $this->hasMany(Order::class, 'loyal_customers_id');
     }
     /**
      * The attributes that should be hidden for arrays.

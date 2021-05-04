@@ -75,7 +75,7 @@ desired effect
 <script type="text/javascript">
     console.log('aaa');
     var select = document.getElementById('changer');
-    $("#changer").on('change', function (){
+    $(".changer").on('change', function (){
         console.log("bb");
         this.form.submit()
     });

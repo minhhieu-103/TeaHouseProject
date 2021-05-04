@@ -40,7 +40,7 @@ Route::get('products/search','ProductController@search');
 Route::get('/search','ProductsController@search');
 
 
-Route::get('/customers/{action}/{id}', 'CustomerController@getAction')->name('customer.action');
+Route::get('/customers/action/{id}', 'CustomerController@getAction')->name('customer.action');
 
 /* hommmmeee */
 Route::get('/','PageController@index');

@@ -25,7 +25,7 @@ class Order extends Model
 //    }
     public function loyalcustomer()
     {
-        return $this->belongsTo('App\LoyalCustomer', 'loyal_customers_id');
+        return $this->belongsTo('App\LoyalCustomer');
 
     }
 

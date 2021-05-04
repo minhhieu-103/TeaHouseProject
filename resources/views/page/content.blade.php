@@ -396,7 +396,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-10">
                     <div class="itemblog_big ">
                         <div class="thumb">
-                            <a class="image-blog scale_hover" href="/nham-nhi-ca-phe-bao-lau-nhung-ban-tan-mat-nhin-ky-xem-hat-ca-phe-chua" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?">
+                            <a class="image-blog scale_hover" href="javascript:;" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?">
                                 <img class="imageload lazyload"                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-1.jpg?v=1608884901087"
                                      data-src="//bizweb.dktcdn.net/100/415/010/articles/untitled-1.jpg?v=1608884901087" alt="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?">
 
@@ -404,7 +404,7 @@
                         </div>
                         <div class="content-blog">
                             <h3>
-                                <a href="/nham-nhi-ca-phe-bao-lau-nhung-ban-tan-mat-nhin-ky-xem-hat-ca-phe-chua" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?">Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?</a>
+                                <a href="javascript:;" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?">Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?</a>
                             </h3>
                             <div class="posts">
 
@@ -420,7 +420,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-10">
                     <div class="itemblog_big">
                         <div class="thumb">
-                            <a class="image-blog scale_hover" href="/uong-1-4-tach-ca-phe-moi-ngay-giup-benh-nhan-ung-thu-keo-dai-su-song" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống">
+                            <a class="image-blog scale_hover" href="javascript:;" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống">
 
                                 <img class="imageload lazyload"                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-1.jpg?v=1608884901087"
                                      data-src="//bizweb.dktcdn.net/100/415/010/articles/untitled-5.jpg?v=1608884590463" alt="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống">
@@ -430,7 +430,7 @@
 
                         <div class="content-blog">
                             <h3>
-                                <a href="/uong-1-4-tach-ca-phe-moi-ngay-giup-benh-nhan-ung-thu-keo-dai-su-song" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống">Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống</a>
+                                <a href="javascript:;" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống">Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống</a>
                             </h3>
                             <div class="posts">
 
@@ -446,7 +446,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-10">
                     <div class="itemblog_big">
                         <div class="thumb">
-                            <a class="image-blog scale_hover" href="/dung-coc-giay-dung-ca-phe-nong-thu-ban-uong-se-khong-chi-la-cafein-ma-con-day-ap-nhung-thu-dang-so-nay" title="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này">
+                            <a class="image-blog scale_hover" href="javascript:;" title="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này">
 
                                 <img class="imageload lazyload"                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-1.jpg?v=1608884901087"
                                      data-src="//bizweb.dktcdn.net/100/415/010/articles/untitled-3.jpg?v=1608884547463" alt="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này">
@@ -456,7 +456,7 @@
 
                         <div class="content-blog">
                             <h3>
-                                <a href="/dung-coc-giay-dung-ca-phe-nong-thu-ban-uong-se-khong-chi-la-cafein-ma-con-day-ap-nhung-thu-dang-so-nay" title="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này">Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này</a>
+                                <a href="javascript:;" title="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này">Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này</a>
                             </h3>
                             <div class="posts">
 
@@ -472,7 +472,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-10">
                     <div class="itemblog_big">
                         <div class="thumb">
-                            <a class="image-blog scale_hover" href="/uong-tra-co-mat-ngu-khong" title="Uống trà có mất ngủ không?">
+                            <a class="image-blog scale_hover" href="javascript:;" title="Uống trà có mất ngủ không?">
 
                                 <img class="imageload lazyload"                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-1.jpg?v=1608884901087"
                                      data-src="//bizweb.dktcdn.net/100/415/010/articles/untitled-2.jpg?v=1608884443517" alt="Uống trà có mất ngủ không?">
@@ -482,7 +482,7 @@
 
                         <div class="content-blog">
                             <h3>
-                                <a href="/uong-tra-co-mat-ngu-khong" title="Uống trà có mất ngủ không?">Uống trà có mất ngủ không?</a>
+                                <a href="javascript:;" title="Uống trà có mất ngủ không?">Uống trà có mất ngủ không?</a>
                             </h3>
                             <div class="posts">
 
@@ -498,7 +498,7 @@
                 <div class="col-xl-4 col-lg-4 col-md-4 col-10">
                     <div class="itemblog_big">
                         <div class="thumb">
-                            <a class="image-blog scale_hover" href="/ca-phe-hay-the-duc-lua-chon-nao-giup-danh-bai-con-buon-ngu-tot-hon" title="Cà phê hay thể dục: Lựa chọn nào giúp đánh bại cơn buồn ngủ tốt hơn?">
+                            <a class="image-blog scale_hover" href="javascript:;" title="Cà phê hay thể dục: Lựa chọn nào giúp đánh bại cơn buồn ngủ tốt hơn?">
 
                                 <img class="imageload lazyload"                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-1.jpg?v=1608884901087"
                                      data-src="//bizweb.dktcdn.net/100/415/010/articles/untitled-6.jpg?v=1608884367517" alt="Cà phê hay thể dục: Lựa chọn nào giúp đánh bại cơn buồn ngủ tốt hơn?">
@@ -508,7 +508,7 @@
 
                         <div class="content-blog">
                             <h3>
-                                <a href="/ca-phe-hay-the-duc-lua-chon-nao-giup-danh-bai-con-buon-ngu-tot-hon" title="Cà phê hay thể dục: Lựa chọn nào giúp đánh bại cơn buồn ngủ tốt hơn?">Cà phê hay thể dục: Lựa chọn nào giúp đánh bại cơn buồn ngủ tốt hơn?</a>
+                                <a href="javascript:;" title="Cà phê hay thể dục: Lựa chọn nào giúp đánh bại cơn buồn ngủ tốt hơn?">Cà phê hay thể dục: Lựa chọn nào giúp đánh bại cơn buồn ngủ tốt hơn?</a>
                             </h3>
                             <div class="posts">
 
@@ -527,7 +527,7 @@
                     <div class="blog_item">
                         <div class="itemblog_big">
                             <div class="thumb">
-                                <a class="image-blog scale_hover" href="/nham-nhi-ca-phe-bao-lau-nhung-ban-tan-mat-nhin-ky-xem-hat-ca-phe-chua" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
+                                <a class="image-blog scale_hover" href="javascript:;" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
                                     <img
                                         class="imageload lazyload loaded"
                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-1.jpg?v=1608884901087"
@@ -540,7 +540,7 @@
 
                             <div class="content-blog">
                                 <h3>
-                                    <a href="/nham-nhi-ca-phe-bao-lau-nhung-ban-tan-mat-nhin-ky-xem-hat-ca-phe-chua" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
+                                    <a href="javascript:;" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
                                         Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?
                                     </a>
                                 </h3>
@@ -555,7 +555,7 @@
                     <div class="blog_item" >
                         <div class="itemblog_big">
                             <div class="thumb">
-                                <a class="image-blog scale_hover" href="/uong-1-4-tach-ca-phe-moi-ngay-giup-benh-nhan-ung-thu-keo-dai-su-song" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
+                                <a class="image-blog scale_hover" href="javascript:;" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
                                     <img
                                         class="imageload lazyload loaded"
                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-5.jpg?v=1608884590463"
@@ -568,7 +568,7 @@
 
                             <div class="content-blog">
                                 <h3>
-                                    <a href="/uong-1-4-tach-ca-phe-moi-ngay-giup-benh-nhan-ung-thu-keo-dai-su-song" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
+                                    <a href="javascript:;" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
                                         Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống
                                     </a>
                                 </h3>
@@ -585,7 +585,7 @@
                             <div class="thumb">
                                 <a
                                     class="image-blog scale_hover"
-                                    href="/dung-coc-giay-dung-ca-phe-nong-thu-ban-uong-se-khong-chi-la-cafein-ma-con-day-ap-nhung-thu-dang-so-nay"
+                                    href="javascript:;"
                                     title="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này"
                                     tabindex="0"
                                 >
@@ -601,7 +601,7 @@
 
                             <div class="content-blog">
                                 <h3>
-                                    <a href="/dung-coc-giay-dung-ca-phe-nong-thu-ban-uong-se-khong-chi-la-cafein-ma-con-day-ap-nhung-thu-dang-so-nay" title="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này" tabindex="0">
+                                    <a href="javascript:;" title="Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này" tabindex="0">
                                         Dùng cốc giấy đựng cà phê nóng, thứ bạn uống đầy ắp những thứ đáng sợ này
                                     </a>
                                 </h3>
@@ -616,7 +616,7 @@
                     <div class="blog_item">
                         <div class="itemblog_big">
                             <div class="thumb">
-                                <a class="image-blog scale_hover" href="/nham-nhi-ca-phe-bao-lau-nhung-ban-tan-mat-nhin-ky-xem-hat-ca-phe-chua" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
+                                <a class="image-blog scale_hover" href="javascript:;" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
                                     <img
                                         class="imageload lazyload loaded"
                                         src="https://bizweb.dktcdn.net/100/415/010/articles/untitled-2.jpg?v=1608884443517"
@@ -629,7 +629,7 @@
 
                             <div class="content-blog">
                                 <h3>
-                                    <a href="/nham-nhi-ca-phe-bao-lau-nhung-ban-tan-mat-nhin-ky-xem-hat-ca-phe-chua" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
+                                    <a href="javascript:;" title="Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?" tabindex="0">
                                         Nhâm nhi cà phê bao lâu nhưng bạn tận mắt nhìn kỹ xem hạt cà phê chưa?
                                     </a>
                                 </h3>
@@ -644,7 +644,7 @@
                     <div class="blog_item" >
                         <div class="itemblog_big">
                             <div class="thumb">
-                                <a class="image-blog scale_hover" href="/uong-1-4-tach-ca-phe-moi-ngay-giup-benh-nhan-ung-thu-keo-dai-su-song" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
+                                <a class="image-blog scale_hover" href="javascript:;" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
                                     <img
                                         class="imageload lazyload loaded"
                                         src="//bizweb.dktcdn.net/100/415/010/articles/untitled-5.jpg?v=1608884590463"
@@ -657,7 +657,7 @@
 
                             <div class="content-blog">
                                 <h3>
-                                    <a href="/uong-1-4-tach-ca-phe-moi-ngay-giup-benh-nhan-ung-thu-keo-dai-su-song" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
+                                    <a href="javascript:;" title="Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống" tabindex="0">
                                         Uống 1-4 tách cà phê mỗi ngày giúp bệnh nhân ung thư kéo dài sự sống
                                     </a>
                                 </h3>
@@ -671,6 +671,8 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 </section>
     <!--section 5 -->
 <section class="awe-section-7">
@@ -679,27 +681,27 @@
             <div aria-live="polite" class="slick-list draggable" >
                 <div class="slick-track" role="listbox"style="opacity: 1;width: 1690px;transform: translate3d(0px, 0px, 0px);" >
                     <div class="item slick-slide slick-active" style="width: 338px;">
-                        <a class="img_" href="#" title="Ảnh 2" tabindex="0">
+                        <a class="img_" href="javascript:;" title="Ảnh 2" tabindex="0">
                             <img class="lazyload img-responsive loaded" src="https://bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_1.jpg?1620009248327" data-src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_2.jpg?1620009248327" alt="Template Tea House" data-was-processed="true">
                         </a>
                     </div>
                     <div class="item slick-slide slick-active" style="width: 338px;">
-                        <a class="img_" href="#" title="Ảnh 2" tabindex="0">
+                        <a class="img_" href="javascript:;" title="Ảnh 2" tabindex="0">
                             <img class="lazyload img-responsive loaded" src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_2.jpg?1620009248327" data-src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_2.jpg?1620009248327" alt="Template Tea House" data-was-processed="true">
                         </a>
                     </div>
                     <div class="item slick-slide slick-active" style="width: 338px;">
-                        <a class="img_" href="#" title="Ảnh 3" tabindex="0">
+                        <a class="img_" href="javascript:;" title="Ảnh 3" tabindex="0">
                             <img class="lazyload img-responsive loaded" src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_3.jpg?1620009248327" data-src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_3.jpg?1620009248327" alt="Template Tea House" data-was-processed="true">
                         </a>
                     </div>
                     <div class="item slick-slide slick-active"style="width: 338px;" >
-                        <a class="img_" href="#" title="Ảnh 4" tabindex="0">
+                        <a class="img_" href="javascript:;" title="Ảnh 4" tabindex="0">
                             <img class="lazyload img-responsive loaded" src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_4.jpg?1620009248327" data-src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_4.jpg?1620009248327" alt="Template Tea House" data-was-processed="true">
                         </a>
                     </div>
                     <div class="item slick-slide slick-active" style="width: 338px;">
-                        <a class="img_" href="#" title="Ảnh 5" tabindex="0">
+                        <a class="img_" href="javascript:;" title="Ảnh 5" tabindex="0">
                             <img class="lazyload img-responsive loaded" src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_5.jpg?1620009248327" data-src="//bizweb.dktcdn.net/thumb/large/100/415/010/themes/818624/assets/picture_5.jpg?1620009248327" alt="Template Tea House" data-was-processed="true">
                         </a>
                     </div>
