@@ -23,8 +23,7 @@ Tiếp theo chúng ta sẽ phải tạo key cho project, trước tiên nếu tr
 Tiếp theo chạy lệnh:
 <pre title="terminal" class="wp-block-code  language-properties"><code lang="properties" class="  language-properties"><span class="token attr-name">php</span> <span class="token attr-value">artisan key:generate</span></code></pre>
 Vào file .env và kiểm tra xem giá trị của APP_KEY đã có chưa.
-Bước 3: Config File .Env
-Tiếp tục với file .env , thường chúng ta sẽ tiến hành config database (và một vài config cho các service như Mail,…). Để config laravel có thể kết nối đến CSDL (trong bài này mình dùng MySQL), chúng ta để ý các trường:
+
 Bước 3: Config File .Env
 Tiếp tục với file .env , thường chúng ta sẽ tiến hành config database (và một vài config cho các service như Mail,…). Để config laravel có thể kết nối đến CSDL (trong bài này mình dùng MySQL), chúng ta để ý các trường:
 Hãy chỉnh sửa các thông tin ở các trường này phù hợp với database mà bạn tạo.
