@@ -1,0 +1,259 @@
+img.imageload.lazyload.loaded {
+    width: 100%;
+}
+
+.itemblog_big .content-blog h3 {
+    font-size: 24px;
+    font-family: 'UTM Bebas';
+    margin-top: 15px;
+}
+
+h3 a {
+    color: black;
+    font-weight: bold;
+}
+
+img {
+    border: 0 none;
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #282828;
+    text-decoration: none;
+    background: 0 0;
+}
+
+.picture_sidebarblog .row .margin-bottom-15 {
+    padding: 0 7.5px;
+}
+
+.picture_sidebarblog .row .margin-bottom-15 {
+    padding: 0 7.5px;
+}
+
+.itembb:last-child .bloglr {
+    margin-bottom: 0px;
+}
+
+.bloglr .image-blog {
+    width: 160px;
+    float: left;
+    margin-bottom: 0px;
+}
+
+.about_sidebarblog .aside-content .about_sum p {
+    font-size: 16px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 500;
+    line-height: 24px;
+    margin-top: 15px;
+}
+
+.btn-primary:hover {
+    background: #282828;
+}
+
+.sidebar-category .aside-content .nav-category .navbar-pills {
+    padding: 0 0px;
+    z-index: 1;
+}
+
+.aside-item.collection-category .nav>li>a {
+    padding: 5px 30px 5px 15px;
+}
+
+.sidebar-category .aside-content .nav-item a {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.sidebar-category .aside-content .nav-item {
+    position: relative;
+    clear: left;
+    font-size: 14px;
+    padding: 2px 0px 2px 0px;
+}
+
+.itemblog_big {
+    position: relative;
+    margin-bottom: 60px;
+}
+/* h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Quicksand", sans-serif;
+    line-height: 1.4;
+    font-weight: inherit;
+}
+ */
+
+.aside-item.collection-category .nav-item a {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    color: #282828;
+    padding: 10px 0px;
+    position: relative;
+}
+
+.blogwp p {
+    color: #282828;
+    font-size: 14px;
+    font-weight: 500;
+    padding-top: 5px;
+}
+
+.sidebar-category .aside-content .nav-item a:before {
+    content: "\f054";
+    position: absolute;
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    color: #4d8a54;
+    top: 6px;
+    left: 0;
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+.aside-item {
+    margin-bottom: 40px;
+}
+
+.bloglr .contentright {
+    display: block;
+    float: left;
+    padding-left: 15px;
+    width: calc(100% - 160px);
+    -webkit-width: calc(100% - 160px);
+    -moz-width: calc(100% - 160px);
+    -o-width: calc(100% - 160px);
+    -os-width: calc(100% - 160px);
+}
+
+.btn-primary {
+    background: #4d8a54;
+    padding: 0 33px !important;
+    height: 40px !important;
+    line-height: 40px !important;
+    border-radius: 30px !important;
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold !important;
+    text-transform: none;
+    display: inline-block;
+}
+
+.bloglr {
+    width: 100%;
+    float: left;
+    padding-bottom: 30px;
+    margin-bottom: 25px;
+}
+
+.margin-top-0 {
+    margin-top: 0px !important;
+}
+
+.blogwp h3 {
+    display: block;
+    color: #282828;
+    font-size: 16.5px;
+    font-family: 'UTM Bebas';
+    font-weight: 400;
+    margin: 0px 0 10px;
+    text-transform: uppercase;
+}
+
+ul.nav.navbar-pills {
+    display: flow-root;
+}
+
+.bloglr .imageload.loaded {
+    height: unset;
+    width: auto;
+}
+
+.bloglr .imageload {
+    height: 162px;
+    width: 100%;
+}
+
+.aside-item .aside-title h2 {
+    font-size: 30px;
+    font-family: 'UTM Bebas';
+    margin: 0;
+    padding-bottom: 15px;
+    position: relative;
+    text-transform: none;
+    border-bottom: 1px solid #ebebeb;
+}
+
+.margin-bottom-15 {
+    margin-bottom: 15px !important;
+}
+
+.aside-item .aside-title h2:before {
+    content: "";
+    position: absolute;
+    width: 75%;
+    height: 3px;
+    background: #4d8a54;
+    bottom: 0;
+    left: 0;
+}
+
+.sidebar-category .aside-content .nav-item .fa {
+    width: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.aside-item.sidebar-category .nav-item .fa {
+    position: absolute;
+    right: -15px;
+    top: 2px;
+}
+
+.sidebar-category .aside-content .nav-item .dropdown-menu {
+    position: static;
+    width: 100%;
+    border: 0;
+    padding-left: 15px;
+}
+
+.sidebar-category .aside-content .nav-item.active .fa {
+    color: #4d8a54;
+}
+
+.sidebar-category .aside-content .nav-item.active>.dropdown-menu {
+    padding: 4px 0 10px 18px;
+    display: block;
+}
+
+.aside-item.collection-category .nav-item .dropdown-menu .nav-item {
+    padding: 3px 0px;
+}
+
+.aside-item.collection-category .nav-item .dropdown-menu .nav-item>a {
+    padding: 5px 30px 5px 15px;
+    line-height: 20px;
+}
+
+.sidebar-category .aside-content .nav-item a:before {
+    content: "\f054";
+    position: absolute;
+    font-family: "Font Awesome\ 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    color: #4d8a54;
+    top: 6px;
+    left: 0;
+}

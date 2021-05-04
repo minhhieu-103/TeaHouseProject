@@ -1,0 +1,172 @@
+.col-left-ac .block-account .title-account {
+    font-family: "Quicksand", sans-serif;
+    font-size: 19px;
+    font-weight: 400;
+    color: #212B25;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.col-left-ac .block-account p {
+    font-weight: 700;
+    font-size: 14px;
+    font-family: "Quicksand", sans-serif;
+    line-height: 16px;
+    margin-bottom: 28px;
+    color: #212B25;
+    position: relative;
+}
+
+.col-left-ac .block-account ul {
+    padding: 0;
+    margin: 0;
+}
+
+.col-left-ac .block-account ul .title-info.active {
+    color: #4d8a54;
+}
+
+.col-left-ac .block-account ul .title-info:hover {
+    color: #4d8a54;
+}
+
+h1,
+.title-head {
+    font-size: 19px;
+    font-family: "Quicksand", sans-serif;
+    line-height: 22px;
+    font-weight: 400;
+    color: #212B25;
+    text-transform: uppercase;
+    margin-bottom: 27px;
+}
+
+
+
+ul li {
+    list-style: none;
+    /* padding-bottom: 5px; */
+}
+
+p {
+    margin: 0 0 15px 0;
+}
+
+section.signup.page_customer_account {
+    padding-bottom: 29px;
+}
+
+.page_customer_account .col-right-ac .my-account .table-responsive-block .table-cart thead th {
+    border-bottom: 1px solid #dee2e6;
+    background: #4d8a54;
+    color: #fff;
+    padding: 5px;
+    border-right: 1px solid #dee2e6;
+    text-align: center;
+}.content_right {
+     float: left;
+     width: calc(100% - 90px);
+     padding-left: 28px;
+     text-align: left;
+     font-size: 13px;
+     line-height: 16px;
+     font-family: "Quicksand",sans-serif;
+     align-self: normal;
+     display: flex;
+     flex-flow: column;
+     justify-content: center;
+     padding: 30px;
+ }.image_order a {
+      height: 90px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-items: center;
+  }.image_order {
+       float: left;
+       width: 90px;
+   }
+td.numeric {
+    padding: 30px;
+}table#my-orders-table {
+     border: 1px solid;
+ }
+.page_customer_account .col-right-ac .my-account .table-responsive-block tbody .first td {
+    /* width: 15%; */
+     padding: 20px 5px;
+}table#my-orders-table td {
+     border-top: 1px solid black;
+     border-right: 1px solid;
+     text-align: center;
+ }
+
+/*td,*/
+/*th.th {*/
+/*    text-align: center;*/
+/*    !* padding: 15px; *!*/
+/*    border: 1px solid #ebebeb;*/
+/*    color: #1c1c1c;*/
+/*}*/
+.body_order .box-address .box-des {
+    min-height: 110px;
+    padding: 13px 25px 10px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}.box-des p {
+     color: #212B25;
+     font-family: "Quicksand", sans-serif;
+     font-size: 14px;
+     line-height: 16px;
+     vertical-align: top;
+     text-align: left;
+     margin-bottom: 8px;
+ }
+.box-des{
+    min-height: 110px;
+    padding: 13px 25px 10px 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding-bottom: 10px;
+}
+.box-address {
+    margin-top: 30px;
+}.payment_status {
+     display: inline-block;
+     font-family: "Quicksand", sans-serif;
+     font-size: 16px;
+     line-height: 16px;
+     margin-right: 35px;
+ }
+span.note.order_date {
+    float: right;
+    font-family: "Quicksand", sans-serif;
+    font-size: 20px;
+    line-height: 16px;
+    font-weight: 400;
+    display: inline-block;
+    margin-top: 5px;
+    margin-bottom: 22px;
+}
+.col-xs-12.col-sm-12.col-md-6.body_order {
+     padding-left: 15px;
+    padding-bottom: 24px;
+}
+.shipping_status {
+      display: inline-block;
+      font-family: "Quicksand", sans-serif;
+      font-size: 16;
+      line-height: 16px;
+  }
+.address_info .address-group .address-default {
+    color: #27AE60;
+    font-size: 15px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    padding-left: 10px;
+}
+
+.address_info .address-group .address-default i {
+    padding-right: 3px;
+}
