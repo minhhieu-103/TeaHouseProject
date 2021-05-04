@@ -1,72 +1,42 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+Long time no see 😀 Hôm nay chúng ta sẽ cùng tìm hiểu quy trình từ khi clone 1 project laravel về đến khi start server chạy như thế nào 1 cách tốt nhất nhé. Do chưa làm với laravel lâu nên các bước này mình cũng không nhớ hết vì vậy mình viết ra bài này để mọi người mới bắt đầu với laravel hoặc hay quên như mình cùng tham khảo để có thể chạy được project laravel suông sẻ nhé (đặc biệt các bạn mới bắt đầu học mà chạy không được project là mau nản lắm).
 
-## About Laravel
+Tóm tắt cho các bạn đã hiểu và cần gấp:
+php artisan migrate:fresh –seed
+php artisan serve
+<pre title="terminal" class="wp-block-code  language-properties"><div class="prism-titlename">composer install</div>
+<div class="prism-titlename">php artisan key:generate
+</div>
+<div class="prism-titlename">Tạo và config file .env</div>
+<div class="prism-titlename">php artisan migrate:fresh –seed
+</div>
+<div class="prism-titlename">php artisan serve</div>
+</pre>
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+Bước 1: Cài Đặt Dependency
+Để cài đặt các dependency cho project, mở terminal từ thư mục project và chạy lệnh:
+<pre title="terminal" class="wp-block-code  language-properties" style="background:black"><div class="prism-titlename">terminal</div><code lang="properties" class="  language-properties"><span class="token attr-name">composer</span> <span class="token attr-value">install</span></code></pre>
+Bước 2: Tạo Key Cho Project
+Tiếp theo chúng ta sẽ phải tạo key cho project, trước tiên nếu trong project clone về chưa có file .env thì phải tạo file này trước. Các bạn chỉ cần coppy file .env.example và rename lại thành .env là được.
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+Tiếp theo chạy lệnh:
+<pre title="terminal" class="wp-block-code  language-properties"><code lang="properties" class="  language-properties"><span class="token attr-name">php</span> <span class="token attr-value">artisan key:generate</span></code></pre>
+Vào file .env và kiểm tra xem giá trị của APP_KEY đã có chưa.
 
-## Learning Laravel
+Bước 3: Config File .Env
+Tiếp tục với file .env , thường chúng ta sẽ tiến hành config database (và một vài config cho các service như Mail,…). Để config laravel có thể kết nối đến CSDL (trong bài này mình dùng MySQL), chúng ta để ý các trường:
+Hãy chỉnh sửa các thông tin ở các trường này phù hợp với database mà bạn tạo.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+Bước 4: Chạy Migration Và Seed
+Laravel hỗ trợ chúng ta config DB ngay trong code PHP mà không cần phải tự tạo DB bằng các câu query nhờ vào migration và seed. Để có thể tạo các cấu trúc bảng trong DB từ laravel (và cả các dữ liệu mẫu trong seed), chạy lệnh:
+<pre title="terminal" class="wp-block-code  language-properties"><code lang="properties" class="  language-properties"><span class="token attr-name">php</span> <span class="token attr-value">artisan migrate:fresh --seed</span></code></pre>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+Bước 5: Chạy Server
+Sau khi hoàn tất các bước trên và thành công, các bạn chỉ cần chạy lệnh:
+<pre title="terminal" class="wp-block-code  language-properties"><code lang="properties" class="  language-properties"><span class="token attr-name">php</span> <span class="token attr-value">artisan serve</span></code></pre>
+Và truy cập vào đường link hiện ra trên console là thành công.
 
-## Laravel Sponsors
-
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
-
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-
-## Contributing
-
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
-
-## Security Vulnerabilities
-
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
-
-## License
-
-The Laravel framework is open-source software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Tổng Kết
+Vậy là chúng ta đã tìm hiểu xong 5 bước để cài đặt và chạy project laravel một cách suông sẻ nhất, nếu trong quá trình làm có phát sinh lỗi các bạn comment bên dưới để mình giúp nhé. Bye 😀
+<h1>Chúc các bạn thành công nhé =)))) 😀</h1>
