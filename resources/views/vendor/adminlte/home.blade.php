@@ -353,7 +353,7 @@
                                 <img  width="100px" src="{{ asset('storage'. str_replace('public', '', $pro->image))}}" alt="Product Image" class="">
                             </div>
                             <div class="product-info">
-                                <a href="javascript:void(0)" class="product-title" style="text-decoration: none"><i class="fa fa-eye"></i> {{$pro->id}} lượt xem
+                                <a href="javascript:void(0)" class="product-title" style="text-decoration: none"><i class="fa fa-eye"></i> {{$pro->quantity}} lượt xem
                                     <span class="badge badge-warning float-right">{{number_format($pro->price)}}</span></a>
                                 <span class="product-description">
                        {{$pro->name}}
