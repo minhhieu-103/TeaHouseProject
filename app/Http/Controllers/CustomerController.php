@@ -94,7 +94,7 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        //
+
     }
 
     /**
@@ -106,7 +106,7 @@ class CustomerController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd($request->all());
     }
 
     /**

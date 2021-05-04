@@ -8,6 +8,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests;
+use App\LoyalCustomer;
+use App\Model\Order;
+use App\Model\Product;
 use Illuminate\Http\Request;
 
 /**
@@ -33,6 +36,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('adminlte::home');
+        // tổng đơn hàng
+        $order = Order::all()->where('id')->count();
+        // Tổng số thành viên
+        $customers = LoyalCustomer::all()->where('id')->count();
+        // Tổng số lượng sản phẩm
+        $products = Product::all()->where('id')->count();
+        // danh sách 10 đơn hàng gần nhất
+
+        $viewData =[
+            'totalUser' => $customers,
+            'totalProducts' => $products,
+            'totalOrders' =>$order
+        ];
+//        dd($viewData['totalUser']);
+        return  view('adminlte::home',compact('viewData'));
+//        return view('adminlte::home');
     }
 }

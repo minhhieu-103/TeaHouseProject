@@ -69,4 +69,15 @@ desired effect
 </body>
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" />
 
+
+{{--<script type="text/javascript" src="jquery-3.5.1.min.js"></script>--}}
+
+<script type="text/javascript">
+    console.log('aaa');
+    var select = document.getElementById('changer');
+    $("#changer").on('change', function (){
+        console.log("bb");
+        this.form.submit()
+    });
+</script>
 </html>

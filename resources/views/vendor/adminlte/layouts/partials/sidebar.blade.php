@@ -33,7 +33,7 @@
         <ul class="sidebar-menu">
 
             <!-- Optionally, you can add icons to the links -->
-            <li class="active"><a href="{{ url('home') }}"><i class="fas fa-tachometer-alt"></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
+            <li class="active"><a href="{{ url('admin') }}"><i class="fas fa-tachometer-alt"></i> <span>{{ trans('adminlte_lang::message.home') }}</span></a></li>
             <li><a href="#"><i class="fas fa-user-shield"></i><span>User</span></a></li>
             <li><a href="{{URL::to('/admin/category')}}"><i class="fab fa-cuttlefish"></i> <span>Category</span></a></li>
             <li><a href="{{URL::to('/admin/products')}}"><i class="fab fa-product-hunt"></i>  <span>Product</span></a></li>

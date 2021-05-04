@@ -69,37 +69,28 @@
 
                     <button class="btn  btn-info js-preview"><a href="{{ route('admin.customers.show', ['id' => $ct->id]) }}" style="color: white;text-decoration: none"><i class="fas fa-eye" style="color: white"></i> View</a></button>
 {{--                    <button class="btn btn-info"><a href="{{ route('admin.customers.show', ['id' => $ct->id]) }}"><i class="fas fa-eye" style="color: white"></i></a></button>--}}
+                    <form class="btn" action="{{ route('admin.customers.destroy', ['id' => $ct->id]) }}" method="post">
+                        @csrf
+                        @method('DELETE')
 
-                    <div class="btn-group">
-                        <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Action
+                        <button class="btn btn-danger">
+                            <i class="fas fa-trash-alt" style="color: white"> Xóa</i>
                         </button>
-                        <ul class="dropdown-menu" role="menu">
-                            <li>  <form class="btn" action="{{ route('admin.customers.destroy', ['id' => $ct->id]) }}" method="post">
-                                    @csrf
-                                    @method('DELETE')
+                    </form>
+                    <form name="frmSearch" id="addsubmit" action="{{route('admin.customers.update' ,['id' => $ct->id])}}" method="put" >
+                        @csrf
+                        <select name="level" id="changer" class="input-sm select2" >
+                            @foreach($inventory as $key => $val)
+                                <option {{\Request::get('get') == $key ? "selected" : ""}} value="{{ $key }}">{{ __('trạng thái') }} - {{ $val }}</option>
+                            @endforeach
+                        </select>
+                    </form>
+                </td>
 
-                                    <button >
-                                       xóa
-                                    </button>
 
-                                </form>
-                            </li>
 
-                            <li><a href="{{URL::to('customers', [$inventory['2'] => $ct->id]) }}"><i class="fa fa-ban"></i>Chưa bàn giao</a>
-                            </li>
 
-                            <li><a href="{{URL::to('customers', [$inventory['3'] => $ct->id]) }}"><i class="far fa-check-circle"></i> Đã bàn giao</a>
-                            </li>
-                            <li><a href="{{URL::to('customers', [$inventory['-1'] => $ct->id]) }}"><i class="fa fa-ban"></i>Hủy</a>
-                            </li>
 
-                        </ul>
-                    </div>
-
-                       </td>
-                <td>
-                   </td>
             </tr>
             <?php $stt++;?>
             @endforeach
@@ -120,6 +111,9 @@
             float: left;
             margin-right: 6px;
         }
+
     </style>
+
+
 @endsection
 

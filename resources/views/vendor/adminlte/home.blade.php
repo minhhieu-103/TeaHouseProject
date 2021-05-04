@@ -13,14 +13,14 @@
                 <!-- small box -->
                 <div class="small-box bg-aqua">
                     <div class="inner">
-                        <h3>150</h3>
+                        <h3>{{$viewData['totalProducts']}}</h3>
 
                         <p>Tổng sản phẩm</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="admin/products" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -43,14 +43,14 @@
                 <!-- small box -->
                 <div class="small-box bg-yellow">
                     <div class="inner">
-                        <h3>{{}}</h3>
+                        <h3>{{$viewData['totalUser']}}</h3>
 
-                        <p>User Registrations</p>
+                        <p>Người dùng</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <a href="admin/customers" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -58,9 +58,9 @@
                 <!-- small box -->
                 <div class="small-box bg-red">
                     <div class="inner">
-                        <h3>65</h3>
+                        <h3>{{$viewData['totalOrders']}}</h3>
 
-                        <p>Unique Visitors</p>
+                        <p>Số lượng mua</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>

@@ -23,13 +23,14 @@ class AdminController extends Controller
         $customers = LoyalCustomer::all()->where('id')->count();
         // Tổng số lượng sản phẩm
         $products = Product::all()->where('id')->count();
+        // danh sách 10 đơn hàng gần nhất
 
         $viewData =[
             'totalUser' => $customers,
             'totalProducts' => $products,
             'totalOrders' =>$order
         ];
-        dd($viewData);
+//        dd($viewData['totalUser']);
         return  view('adminlte::home',compact('viewData'));
     }
 
