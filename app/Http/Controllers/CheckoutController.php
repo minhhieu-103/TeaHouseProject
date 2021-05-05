@@ -54,6 +54,7 @@ class CheckoutController extends Controller
         $categories = Category::all();
         $rule = [
             'address' => 'required',
+//            'email' => 'required|loyal_customers|unique'
 
         ];
 
@@ -73,6 +74,7 @@ class CheckoutController extends Controller
 //                // user found
 //            }
          $data = $request->all();
+
             $customer = LoyalCustomer::create($data);
 //            $customer = LoyalCustomer::create(
 //                array(
@@ -83,7 +85,7 @@ class CheckoutController extends Controller
 
             $order =Order::create(
                 [
-                    'status' => $inventory['1'],
+                    'status' => 1,
                     'loyal_customers_id' => $customer->id,
                      'date_order' =>date('Y-m-d H:i:s'),
                     'total' =>   str_replace(',', '', Cart::total(0)),

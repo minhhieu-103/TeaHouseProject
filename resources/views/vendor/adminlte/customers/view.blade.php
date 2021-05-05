@@ -1,4 +1,8 @@
 @extends('adminlte::layouts.app')
+@section('htmlheader_title')
+    Customer Detail
+@endsection
+
 @section('main-content')
     <section class="bread-crumb">
         <span class="crumb-border">

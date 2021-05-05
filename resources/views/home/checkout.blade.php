@@ -62,7 +62,7 @@
                     <label for="address">Phone</label>
                     <input  class="form-control"  type="text" name="phone" id="phone" value="{{Auth::guard('loyal_customer')->user()->phone}}" max="12" required >
                     <label for="address">Address</label>
-                    <input type="text" name="address" alue="{{Auth::guard('loyal_customer')->user()->address}}" id="address" required>
+                    <input type="text" name="address"  id="address" required>
                     <small class="text-danger">Chỉ nhận đơn trong thành phố</small>
                 </div>
             <div class="col-md-4 order-md-2 mb-4">

@@ -1,4 +1,8 @@
 @extends('adminlte::layouts.app')
+@section('htmlheader_title')
+    Customer
+@endsection
+
 @section('main-content')
     @include('flash-message')
     <section class="bread-crumb">

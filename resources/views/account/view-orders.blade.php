@@ -58,9 +58,12 @@
                             <i class="status_pending">
 
                                 <em>
+                                    @if($orderDetail['status'] == 3)
 
-                                    <span class="span_pending" style="color: red"><strong><em>Chưa thanh toán</em></strong></span>
-
+                                    <span class="span_pending" style="color: red"><strong><em>Đã thanh toán</em></strong></span>
+                                    @else
+                     <span class="span_pending" style="color: red"><strong><em>Chưa thanh toán</em></strong></span>
+                                    @endif
                                 </em>
 
                             </i>
@@ -69,8 +72,18 @@
                         <div class="shipping_status">
                             <span class="note">Trạng thái vận chuyển:</span>
 
+                            @if($orderDetail['status'] == 1)
+                                <span class="span_" style="color: red"><strong><em>Đã tiếp cận</em></strong></span>
 
-                            <span class="span_" style="color: red"><strong><em>{{$orderDetail->status}}</em></strong></span>
+                            @elseif($orderDetail['status'] == 2)
+                                <span class="span_" style="color: blue"><strong><em>Đang giao hàng <i class="fas fa-spinner"></i></em></strong></span>
+                            @elseif($orderDetail['status'] == 3)
+                                <span class="span_" style="color: green"><strong><em>Đã giao hàng</em></strong></span>
+                            @else
+                                <a style="color: white;font-size: 14px"
+                                   class="btn btn-danger btn-xs"><i class="fas fa-ban"></i> Chưa tiếp nhận</a>
+                            @endif
+
 
 
                         </div>
@@ -82,13 +95,13 @@
                                     <h2 class="title-head">Địa chỉ giao hàng</h2>
 
                                     <div class="address box-des">
-                                        <p> <strong> {{$orderDetail->loyalcustomer->name}}</strong></p>
+                                        <p> <strong> {{optional($orderDetail->loyalcustomer)->name}}</strong></p>
                                         <p>
-                                            {{$orderDetail->loyalcustomer->address}}
+                                            {{optional($orderDetail->loyalcustomer)->address}}
 
                                         </p>
 
-                                        <p>Số điện thoại: {{$orderDetail->loyalcustomer->phone}}</p>
+                                        <p>Số điện thoại: {{optional($orderDetail->loyalcustomer)->phone}}</p>
 
                                     </div>
                                 </div>

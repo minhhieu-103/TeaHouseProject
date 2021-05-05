@@ -33,16 +33,14 @@ class AccountController extends Controller
         $auth =Auth::guard('loyal_customer')->user()->email;
 //        $auth =Auth::guard('loyal_customer')->user()->email;
         $orderDetail = LoyalCustomer::with('orders')->where('email', $auth)->orderBy('created_at', 'desc')->get()->toArray();
-        $arr_Order = $orderDetail->orders;
-        dd($arr_Order);
-
-
+//    dd($orderDetail->orders->status);
+//        $orders = Order::with('loyalcustomer')->where('loyal_customers_id', Auth::guard('loyal_customer')->user()->id)->orderBy('created_at', 'desc')->get();
 
 //        $customers =Order::with('loyalcustomer')->orderBy('id')->get();
 
 
 
-        return  view('account.orders',compact('categories','orderDetail','auth'));
+        return  view('account.orders',compact('categories','orderDetail'));
     }
     public function address(){
         $categories = Category::all();
@@ -54,7 +52,8 @@ class AccountController extends Controller
     public function getordersaccount($id){
         $categories = Category::all();
 
-        $orderDetail = Order::with('orderdetails')->where('loyal_customers_id', $id)->first();
+        $orderDetail = Order::with('orderdetails','loyalcustomer')->where('loyal_customers_id', $id)->first();
+
         $arr_Order = $orderDetail->orderdetails;
 
 //        dd($arr_Order);
@@ -63,7 +62,7 @@ class AccountController extends Controller
             $ids[] = $item->product_id;
         }
         $products = Product::whereIn('id', $ids)->get();
-        return  view('account.view-orders',compact('categories','orderDetail','arr_Order','products'));
+        return  view('account.view-orders',compact('categories','orderDetail','arr_Order','products','orderDetail'));
 
 
     }
