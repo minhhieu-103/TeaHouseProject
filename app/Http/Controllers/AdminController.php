@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Helpers\DateHelper;
 use App\LoyalCustomer;
 use App\Model\Order;
 use App\Model\OrderDetail;
@@ -29,19 +30,56 @@ class AdminController extends Controller
         // danh sách 10 đơn hàng gần nhất
         $listcustomers = LoyalCustomer::with('orders')->orderByDesc('id')->limit(10)->get();
 
+
+        $listday = DateHelper::getListDayInMonth();
+//        dd($listday);
         //danh sach so san pham xem nhieu
-        $topProduct = Product::orderByDesc('id')->limit(10)->get();
-//        dd($detail);
-        $viewData =[
+        $topProduct = Product::orderByDesc('id')->limit(9)->get();
+        //trang thai don hang
+        //tiep nhan
+        $statusDefault = Order::where('status', 1)->select('id')->count();
+        // dang van chuyen
+        $statusProcess = Order::where('status', 2)->select('id')->count();
+        // da ban giao
+        $statusSuccess = Order::where('status', 3)->select('id')->count();
+        // huy hang
+        $statusCancel = Order::where('status', -1)->select('id')->count();
+
+        $statusChart = [
+            [
+                'Tiếp nhận' , $statusDefault,false
+            ],
+            [
+                'Đang vận chuyển' , $statusProcess,false
+            ],
+            [
+                'Đã hoàn thành ' , $statusSuccess,false
+            ],
+            [
+                'Hủy bỏ' , $statusCancel,false
+            ],
+
+         ];
+//dd($statusChart);
+
+
+        // doanh thu thang
+        $revenueProduct =  Order::where('status', 3)->whereMonth('created_at',date('m'))
+            ->select(DB::raw('sum(total) as total '),DB::raw('DATE(created_at)day  '))
+            ->groupBy('day')->get()->toArray();
+//        dd($revenueProduc//t);
+        $viewData = [
             'totalUser' => $customers,
             'totalProducts' => $products,
-            'totalOrders' =>$order,
+            'totalOrders' => $order,
             'totalPrice' => $detail,
-            'listCustomer' =>$listcustomers,
-            'topProducts' =>$topProduct
+            'listCustomer' => $listcustomers,
+            'topProducts' => $topProduct,
+            'listDay' => json_encode($listday, true),
+            'statusChart' => json_encode($statusChart)
         ];
 //        dd($viewData['totalUser']);
-        return  view('adminlte::home',compact('viewData'));
+        return view('adminlte::home', compact('viewData'));
     }
 
     /**
@@ -57,7 +95,7 @@ class AdminController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
@@ -68,7 +106,7 @@ class AdminController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function show($id)
@@ -79,7 +117,7 @@ class AdminController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
@@ -90,8 +128,8 @@ class AdminController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param \Illuminate\Http\Request $request
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
@@ -102,7 +140,7 @@ class AdminController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  int  $id
+     * @param int $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)

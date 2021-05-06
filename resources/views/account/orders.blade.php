@@ -106,16 +106,16 @@
 
 
                                                             @if($or['status'] == 1)
-                                                                <a style="color: white;font-size: 14px"
+                                                                <a style="color: white;font-size: 10px"
                                                                    class="btn btn-info btn-xs"><i class="fas fa-hand-paper"></i> Tiếp nhận</a>
                                                             @elseif($or['status'] == 2)
-                                                                <a style="color: white;font-size: 14px"
+                                                                <a style="color: white;font-size: 10px"
                                                                    class="btn btn-info btn-xs"><i class="fas fa-shipping-fast"></i> Đang giao ...</a>
                                                             @elseif($or['status'] == 3)
-                                                                <a style="color: white;font-size: 14px"
+                                                                <a style="color: white;font-size: 10px"
                                                                    class="btn btn-success btn-xs"><i class="fas fa-check-circle"></i> Đã giao</a>
                                                             @else
-                                                                <a style="color: white;font-size: 14px"
+                                                                <a style="color: white;font-size: 10px"
                                                                    class="btn btn-danger btn-xs"><i class="fas fa-ban"></i> Chưa tiếp nhận</a>
                                                             @endif
 

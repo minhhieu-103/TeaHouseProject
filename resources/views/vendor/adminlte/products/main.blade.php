@@ -23,7 +23,7 @@
             </div>
         </div>
     </section>
-    @include('flash-message');
+    @include('flash-message')
 
     <div class="add"style="padding: 12px">
         <button class="btn btn-success" title="add news"><a href="{{URL::to('/admin/products/create')}}"><i class="fas fa-plus"></i> Add Products</a></button>
