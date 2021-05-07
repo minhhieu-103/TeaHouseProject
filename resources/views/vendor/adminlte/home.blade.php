@@ -92,7 +92,7 @@
     <div class="row">
         <div class="col-sm-8">
             <figure class="highcharts-figure">
-                <div id="container2" data-day="{{$viewData['listDay']}}"></div>
+                <div id="container2" data-day="{{$viewData['listDay']}}" data-money="{{$viewData['arrRevenueProduct']}}" data-money-default="{{$viewData['arrRevenueProductDefault']}}"</div>
 
             </figure>
         </div>
@@ -103,7 +103,7 @@
             </figure>
 
         </div>
-    </div>
+
     {{--    </div>--}}
     <div class="row">
         <!-- Left col -->
@@ -325,8 +325,11 @@
             });
 
             var ChartProduct = document.getElementById("container2").getAttribute('data-day');
-
             ChartProduct = JSON.parse(ChartProduct)
+            var listMoneyMonth = document.getElementById("container2").getAttribute('data-money');
+            listMoneyMonth = JSON.parse(listMoneyMonth)
+            var listMoneyMonthDefault = document.getElementById("container2").getAttribute('data-money-default');
+            listMoneyMonthDefault = JSON.parse(listMoneyMonthDefault)
             Highcharts.chart('container2', {
                 chart: {
                     type: 'spline'
@@ -362,56 +365,21 @@
                     }
                 },
                 series: [{
-                    name: 'Tiếp Cận',
+                    name: 'Đã thanh toán',
                     marker: {
                         symbol: 'square'
                     },
-                    data: [7.0, 6.9, 9.5, 14., 4, 4, {
-                        y: 26.5,
-                        marker: {
-                            symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-                        }
-                    }, 23.3, 18.3, 13.9, 9.6]
+                    data: listMoneyMonth
 
-                }, {
-                    name: 'Vận Chuyển',
+                },{
+                    name: 'Tiếp nhận',
                     marker: {
                         symbol: 'square'
                     },
-                    data: [7.0, 6.9, 9.5, 14., 4, 55.34, 5, 4, 9, 9, 99, {
-                        y: 26.5,
-                        marker: {
-                            symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-                        }
-                    }, 23.3, 18.3, 13.9, 9.6]
+                    data: listMoneyMonthDefault
 
-                },
-                    {
-                        name: 'Hủy',
-                        marker: {
-                            symbol: 'square'
-                        },
-                        data: [0, 3, 9.5, 14., 4, 23.34, 5, 4, {
-                            y: 26.5,
-                            marker: {
-                                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-                            }
-                        }, 23.3, 18.3, 13.9, 9.6]
-
-                    },
-                    {
-                        name: 'Đã hoàn thành',
-                        marker: {
-                            symbol: 'square'
-                        },
-                        data: [0, 3, 9.5, 14., 4, 23.34, 5, 4, 65.4, 44, 4, {
-                            y: 26.5,
-                            marker: {
-                                symbol: 'url(https://www.highcharts.com/samples/graphics/sun.png)'
-                            }
-                        }, 23.3, 18.3, 13.9, 9.6]
-
-                    }],
+                }
+                ],
             });
         </script>
 

@@ -63,11 +63,43 @@ class AdminController extends Controller
 //dd($statusChart);
 
 
-        // doanh thu thang
+        // doanh thu theo tháng ứng với trạng thái đã xử lí
         $revenueProduct =  Order::where('status', 3)->whereMonth('created_at',date('m'))
             ->select(DB::raw('sum(total) as total '),DB::raw('DATE(created_at)day  '))
-            ->groupBy('day')->get()->toArray();
-//        dd($revenueProduc//t);
+            ->groupBy('day')
+            ->get()->toArray();
+        // doanh thu theo tháng ứng với trạng thái tiếp nhận
+        $revenueProductDefault =  Order::where('status', 1)->whereMonth('created_at',date('m'))
+            ->select(DB::raw('sum(total) as total '),DB::raw('DATE(created_at)day  '))
+            ->groupBy('day')
+            ->get()->toArray();
+
+        $arrevenueProductDefault = [];
+        $arrevenueProduct = [];
+        foreach($listday as $day){
+            $total = 0;
+            foreach ($revenueProduct as $key => $revenue){
+                if ($revenue['day'] == $day){
+                    $total = $revenue['total'];
+                    break;
+                }
+            }
+            $arrevenueProduct[] = (int)$total;
+            // default
+            $total = 0;
+            foreach ($revenueProductDefault as $key => $revenue){
+                if ($revenue['day'] == $day){
+                    $total = $revenue['total'];
+                    break;
+                }
+            }
+            $arrevenueProductDefault[] = (int)$total;
+
+        }
+
+//        dd($arrevenueProduct);
+
+//        dd($revenueProduct);
         $viewData = [
             'totalUser' => $customers,
             'totalProducts' => $products,
@@ -76,7 +108,9 @@ class AdminController extends Controller
             'listCustomer' => $listcustomers,
             'topProducts' => $topProduct,
             'listDay' => json_encode($listday, true),
-            'statusChart' => json_encode($statusChart)
+            'statusChart' => json_encode($statusChart),
+            'arrRevenueProduct' => json_encode($arrevenueProduct),
+            'arrRevenueProductDefault' => json_encode($arrevenueProductDefault)
         ];
 //        dd($viewData['totalUser']);
         return view('adminlte::home', compact('viewData'));
