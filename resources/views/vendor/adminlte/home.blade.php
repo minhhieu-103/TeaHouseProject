@@ -6,83 +6,67 @@
 
 
 @section('main-content')
-    <section class="content-header">
-        <h1> Trang chủ
-            <small>Bảng điều khiển</small>
-            <small></small></h1>
-    </section>
+
     <section class="content" style="height: auto !important; min-height: 0px !important;">
-        <!-- Small boxes (Stat box) -->
+
         <div class="row">
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-red">
-                    <div class="inner">
-                        <?php ?>
-                        <h3>{{$viewData['totalUser']}}</h3>
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-aqua"><i class="fas fa-cogs"></i></span>
 
-                        <p>Người dùng</p>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Products</span>
+                        <span class="info-box-number">{{$viewData['totalProducts']}}</span>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-user-secret"></i>
-                    </div>
-                    <a href="admin/customers" class="small-box-footer">More info <i
-                            class="fa fa-arrow-circle-right"></i></a>
+                    <!-- /.info-box-content -->
                 </div>
+                <!-- /.info-box -->
             </div>
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-aqua">
-                    <div class="inner">
-                        <h3>{{$viewData['totalProducts']}}</h3>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-red"><i class="fas fa-money-check-alt"></i></span>
 
-                        <p>Tổng sản phẩm</p>
+                    <div class="info-box-content">
+                        <span class="info-box-text">Revenue</span>
+                        <span class="info-box-number">{{number_format($viewData['totalPrice'])}} vnđ</span>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-coffee"></i>
-                    </div>
-                    <a href="admin/products" class="small-box-footer">More info <i
-                            class="fas fa-arrow-circle-right"></i></a>
+                    <!-- /.info-box-content -->
                 </div>
+                <!-- /.info-box -->
             </div>
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-green">
-                    <div class="inner">
-                        <h3>{{$viewData['totalOrders']}}</h3>
+            <!-- /.col -->
 
-                        <p>Số lượng mua</p>
+            <!-- fix for small devices only -->
+            <div class="clearfix visible-sm-block"></div>
+
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-green"><i class="ion ion-ios-cart-outline"></i></span>
+
+                    <div class="info-box-content">
+                        <span class="info-box-text">Sales</span>
+                        <span class="info-box-number">{{$viewData['totalOrders']}}</span>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-money-check-alt"></i></div>
-                    <a href="#" class="small-box-footer">More info <i class="fa fa-arrow-circle-right"></i></a>
+                    <!-- /.info-box-content -->
                 </div>
+                <!-- /.info-box -->
             </div>
+            <!-- /.col -->
+            <div class="col-md-3 col-sm-6 col-xs-12">
+                <div class="info-box">
+                    <span class="info-box-icon bg-yellow"><i class="ion ion-ios-people-outline"></i></span>
 
-            <!-- ./col -->
-            <div class="col-lg-3 col-xs-6">
-                <!-- small box -->
-                <div class="small-box bg-yellow">
-                    <div class="inner">
-                        <h3>{{number_format($viewData['totalPrice'])}} vnđ</h3>
-
-                        <p>Tổng doanh thu tạm tính</p>
+                    <div class="info-box-content">
+                        <span class="info-box-text">New Members</span>
+                        <span class="info-box-number">{{$viewData['totalUser']}}</span>
                     </div>
-                    <div class="icon">
-                        <i class="fas fa-money-bill-wave"></i>
-                    </div>
-                    <a href="/admin/customers" class="small-box-footer">More info <i
-                            class="fa fa-arrow-circle-right"></i></a>
+                    <!-- /.info-box-content -->
                 </div>
+                <!-- /.info-box -->
             </div>
-            <!-- ./col -->
-
-            <!-- ./col -->
-            <!-- ./col -->
+            <!-- /.col -->
         </div>
-        <!-- /.row -->
-        <!-- Main row -->
-
         <!-- right col -->
 
         <!-- /.row (main row) -->
@@ -160,7 +144,7 @@
                                                 <span class="label label-danger">Hủy</span>
                                             @endif
                                         </td>
-                                        <td>{{$ct->created_at}}</td>
+                                        <td>{{$ct->created_at->diffForHumans()}}</td>
                                 </tr>
 
 
@@ -176,7 +160,7 @@
                 <!-- /.box-body -->
                 <div class="box-footer clearfix">
 {{--                    <a href="javascript:void(0)" class="btn btn-sm btn-info btn-flat pull-left">Place New Order</a>--}}
-                    <a href="javascript:void(0)" class="btn btn-sm btn-danger btn-flat pull-right">Xem tất cả đơn hàng</a>
+                    <a href="admin/customers" class="btn btn-sm btn-danger btn-flat pull-right">Xem tất cả đơn hàng</a>
                 </div>
                 <!-- /.box-footer -->
             </div>
@@ -372,7 +356,7 @@
                     data: listMoneyMonth
 
                 },{
-                    name: 'Tiếp nhận',
+                    name: 'Đang vận chuyển',
                     marker: {
                         symbol: 'square'
                     },

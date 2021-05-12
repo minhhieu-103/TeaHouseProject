@@ -14,7 +14,7 @@
                         <div class="cartsearch">
                             <div class="searchhd">
                                 <span><i><img src="//bizweb.dktcdn.net/100/415/010/themes/806477/assets/i_search.png?1612509872226" alt="Template Tea House"></i> Tìm kiếm</span>
-                                <form action="{{URL::to('products')}}" method="get" class="input-group search-bar" role="search">
+                                <form action="{{URL::to('/search')}}" method="get" class="input-group search-bar" role="search">
                                     <input type="search" name="search"  placeholder="Tìm kiếm..." class="input-group-field auto-search">
                                     <button type="submit" class="visible_index btn icon-fallback-text">
                                         <i class="fa fa-search"></i>

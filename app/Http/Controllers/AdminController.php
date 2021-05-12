@@ -7,6 +7,7 @@ use App\LoyalCustomer;
 use App\Model\Order;
 use App\Model\OrderDetail;
 use App\Model\Product;
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -19,6 +20,8 @@ class AdminController extends Controller
      */
     public function index()
     {
+//        $duedate = Carbon::now()->addDays(14);
+//            dd($duedate);
         // tổng đơn hàng
         $order = Order::all()->where('id')->count();
         // Tổng số thành viên
@@ -68,13 +71,15 @@ class AdminController extends Controller
             ->select(DB::raw('sum(total) as total '),DB::raw('DATE(created_at)day  '))
             ->groupBy('day')
             ->get()->toArray();
-        // doanh thu theo tháng ứng với trạng thái tiếp nhận
-        $revenueProductDefault =  Order::where('status', 1)->whereMonth('created_at',date('m'))
+        // doanh thu theo tháng ứng với trạng thái đang vận chuyển
+        $revenueProductDefault =  Order::where('status', 2)->whereMonth('created_at',date('m'))
             ->select(DB::raw('sum(total) as total '),DB::raw('DATE(created_at)day  '))
             ->groupBy('day')
             ->get()->toArray();
 
+
         $arrevenueProductDefault = [];
+
         $arrevenueProduct = [];
         foreach($listday as $day){
             $total = 0;
@@ -94,6 +99,15 @@ class AdminController extends Controller
                 }
             }
             $arrevenueProductDefault[] = (int)$total;
+//            //drive
+//            $total = 0;
+//            foreach ($revenueProductDefault as $key => $revenue){
+//                if ($revenue['day'] == $day){
+//                    $total = $revenue['total'];
+//                    break;
+//                }
+//            }
+//            $arrevenueProductDrive[] = (int)$total;
 
         }
 

@@ -29,14 +29,18 @@ class ProductsController extends Controller
 
         return view('home.products', compact('categories','products'));
     }
-//    public function search(Request  $request)
-//    {
-//
-//        $categories= Category::all();
-////        dd($categories);
-//        return view('products',compact('products','categories'));
-//
-//    }
+   public function search(Request  $request)
+   {       
+        $search = $request->get('search');
+        $products= Product::where('name','like','%'.$search. '%')->paginate(5);
+
+
+       $categories= Category::all();
+   
+//        dd($categories);
+       return view('home.products',compact('products','categories'));
+
+   }
     public function show($id)
     {
         $categories = Category::all();
