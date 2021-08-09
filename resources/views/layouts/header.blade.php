@@ -27,7 +27,7 @@
                                 <span><i><img src="//bizweb.dktcdn.net/100/415/010/themes/806477/assets/i_user.png?1612509872226" alt="Template Tea House"></i>Tài khoản</span>
                                       <div class="group_ac">
                                     <a  href="/account"class="btnx" href="" >{{Auth::guard('loyal_customer')->user()->name }}</a>
-                                          <div class="logout">
+                                     {{-- <div class="logout"> --}}
 
                                                   <a href="{{ url('/logout/customer') }}" class="btn btn-default btn-flat"
                                                      onclick="event.preventDefault();
@@ -41,7 +41,7 @@
                                                   </form>
 
 
-                                          </div>
+                                         {{-- </div> --}}
 
                                 </div>
 

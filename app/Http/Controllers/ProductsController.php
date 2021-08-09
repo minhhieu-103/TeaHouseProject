@@ -15,30 +15,16 @@ class ProductsController extends Controller
      */
     public function index()
     {
-
-//        $search = $request->get('query');
-//        $products = Product::where('name');
-//        if(!empty($search)){
-//
-//            $products= Product::where('name','like','%'.$search. '%');
-//
-//        }
         $products = Product::paginate(8);
         $categories = Category::with('products')->orderByDesc('id')->get();
-//        dd($categories);
-
         return view('home.products', compact('categories','products'));
     }
    public function search(Request  $request)
    {       
         $search = $request->get('search');
         $products= Product::where('name','like','%'.$search. '%')->paginate(5);
-
-
-       $categories= Category::all();
-   
-//        dd($categories);
-       return view('home.products',compact('products','categories'));
+        $categories= Category::all();
+        return view('home.products',compact('products','categories'));
 
    }
     public function show($id)
@@ -51,7 +37,6 @@ class ProductsController extends Controller
     public function cart(){
         $categories= Category::all();
         $cartItem = Cart::Content()->count();
-
         return view('cart.cart',compact('cartItem','categories'));
     }
     public function addToCart($id){

@@ -21,7 +21,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        $customers = LoyalCustomer::with('orders')->paginate(12);
+        $customers = LoyalCustomer::with('orders')->orderByDesc('created_at', 'Desc')->paginate(5);
 
 //        dd($customers);
         $inventory = Order::getInventory();

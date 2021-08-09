@@ -109,16 +109,16 @@ class CheckoutController extends Controller
             }
 //            dd($cartInfor);
 //            foreach($)
-            Mail::send('contact.contact',[
-                'c_name' => $c_name,
-                'order' => $order,
-                'items' =>$cartInfor,
-                'customer' => $customer
-            ],function($mail) use( $c_name, $customer,$c_email,$request){
-                $mail->to($c_email,$c_name);
-                $mail->from('mailinh13a@gmail.com');
-                $mail->subject('Xác nhận đơn hàng từ Template Tea House');
-            });
+            // Mail::send('contact.contact',[
+            //     'c_name' => $c_name,
+            //     'order' => $order,
+            //     'items' =>$cartInfor,
+            //     'customer' => $customer
+            // ],function($mail) use( $c_name, $customer,$c_email,$request, $order){
+            //     $mail->to($c_email,$c_name);
+            //     $mail->from('mailinh13a@gmail.com');
+            //     $mail->subject('Xác nhận đơn hàng số '.$order->id.' từ Template Tea House');
+            // });
 
             // del
             Cart::destroy();
