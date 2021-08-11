@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Model\Category;
 use Illuminate\Http\Request;
+use Session;
 use Illuminate\Support\Facades\Mail;
 
 class PageController extends Controller
@@ -11,7 +12,8 @@ class PageController extends Controller
     public function index()
     {
         $categories = Category::with('products')->orderByDesc('id', 'ASC')->get();
-        return view ('page.content',compact('categories'));
+        $cart = Session::get('cart');
+        return view ('page.content',compact('categories','cart'));
     }
     public function introduce()
     {

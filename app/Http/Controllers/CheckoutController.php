@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Validator;
-
+use Session;
 class CheckoutController extends Controller
 {
     /**
@@ -25,10 +25,13 @@ class CheckoutController extends Controller
     {
         $categories= Category::all();
         $this->data['title'] = 'Check out';
-        $this->data['cart'] = Cart::content();
-//        dd($this->data['cart'] );
-        $this->data['total'] = Cart::total();
-
+        $this->data['cart'] =  session('cart');
+// 
+$total = 0 ;
+foreach((array) session('cart') as $id => $details){
+    $total +=  $details['price']*$details['quantity'];
+}
+        $this->data['total'] = $total;
         return view('home.checkout', $this->data,compact('categories'));
     }
 
@@ -41,7 +44,7 @@ class CheckoutController extends Controller
 
 
     public function postCheckOut(Request $request){
-        $cartInfor = Cart::content();
+        $cartInfor = Session::get('cart');
         $c_name =Auth::guard('loyal_customer')->user()->name;
         $c_email =Auth::guard('loyal_customer')->user()->email;
 //        foreach($cartInfor as $key => $val){
@@ -74,7 +77,6 @@ class CheckoutController extends Controller
 //                // user found
 //            }
          $data = $request->all();
-
             $customer = LoyalCustomer::create($data);
 //            $customer = LoyalCustomer::create(
 //                array(
@@ -82,30 +84,35 @@ class CheckoutController extends Controller
 //                )
 //            );
 //            dd($customer);
-
+$total = 0 ;
+foreach((array) session('cart') as $id => $details){
+    $total +=  $details['price'] * $details['quantity'];
+}
             $order =Order::create(
                 [
                     'status' => 1,
                     'loyal_customers_id' => $customer->id,
                      'date_order' =>date('Y-m-d H:i:s'),
-                    'total' =>   str_replace(',', '', Cart::total(0)),
+                    'total' =>   str_replace(',', '', $total),
 
                 ]
             );
-//            dd($order);
 
             if (count($cartInfor) > 0) {
                 foreach ($cartInfor as $item) {
-                    OrderDetail::create(
-                        array(
+                     $total = 0 ;
+                    foreach((array) session('cart') as $id => $details){
+                        $total +=  $details['price'] * $details['quantity'];
+                    }
+                  $a =  OrderDetail::create(
+                        ([
                             'orders_id' => $order->id,
-                            'product_id' => $item ->id,
-                            'quantity' => $item ->qty,
-                            'price' => $item->price,
-                        )
+                            'product_id' => $item['id'],
+                            'quantity' => $item['quantity'],
+                            'price' => $total,
+                            ])
                     );
                 }
-
             }
 //            dd($cartInfor);
 //            foreach($)
@@ -121,7 +128,8 @@ class CheckoutController extends Controller
             // });
 
             // del
-            Cart::destroy();
+            // Cart::destroy();
+            Session::forget('cart');
             return  back();
 
         } catch (\Exception $e) {

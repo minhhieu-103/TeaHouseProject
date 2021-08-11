@@ -6,41 +6,38 @@
 @include('flash-message')
 
 <div class="checkout">
-    <h1 class="text-center">CHECKOUT</h1>
-
-    <h1>{{ (session('message') ? session('message') : " ") }}</h1>
-    <?php if (Cart::content()->isEmpty()) { ?>
-    <section class="section section--icon-heading" style="text-align: center">
-        <div class="section__icon unprintable">
-            <svg xmlns="http://www.w3.org/2000/svg" width="72px" height="72px">
-                <g fill="none" stroke="#8EC343" stroke-width="2">
-                    <circle cx="36" cy="36" r="35" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"></circle>
-                    <path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"></path>
-                </g>
-            </svg>
-        </div>
-        <div class="thankyou-message-container">
-            <h2 class="section__title">Cảm ơn bạn đã đặt hàng</h2>
-
-            <p class="section__text">
-                Một email xác nhận đã được gửi tới {{Auth::guard('loyal_customer')->user()->email}} <br>
-                Xin vui lòng kiểm tra email của bạn
-            </p>
-
-
-        </div>
-        <button  class="btn btn-success"><a href="/" style="color: white"><i class="fas fa-reply"></i>Trở lại mua hàng </a></button>
-    </section>
-    <style>
-        h1.text-center {
-            display: none;
-        }.col-7.col-md-7.detail {
-             display: none;
-         }.col-md-4.order-md-2.mb-4 {
-              display: none;
-          }
-    </style>
-    <?php } ?>
+    <?php if ( empty( session('cart'))) { ?>
+        <section class="section section--icon-heading" style="text-align: center">
+            <div class="section__icon unprintable">
+                <svg xmlns="http://www.w3.org/2000/svg" width="72px" height="72px">
+                    <g fill="none" stroke="#8EC343" stroke-width="2">
+                        <circle cx="36" cy="36" r="35" style="stroke-dasharray:240px, 240px; stroke-dashoffset: 480px;"></circle>
+                        <path d="M17.417,37.778l9.93,9.909l25.444-25.393" style="stroke-dasharray:50px, 50px; stroke-dashoffset: 0px;"></path>
+                    </g>
+                </svg>
+            </div>
+            <div class="thankyou-message-container">
+                <h2 class="section__title">Cảm ơn bạn đã đặt hàng</h2>
+    
+                <p class="section__text">
+                    Một email xác nhận đã được gửi tới {{Auth::guard('loyal_customer')->user()->email}} <br>
+                    Xin vui lòng kiểm tra email của bạn
+                </p>
+    
+    
+            </div>
+            <button  class="btn btn-success"><a href="/" style="color: white"><i class="fas fa-reply"></i>Trở lại mua hàng </a></button>
+        </section>
+        <style>
+            h1.text-center {
+                display: none;
+            }.col-7.col-md-7.detail {
+                 display: none;
+             }.col-md-4.order-md-2.mb-4 {
+                  display: none;
+              }
+        </style>
+        <?php } ?>
     <div class="container">
         <form action="{{URL::to('checkouts')}}" method="post">
             @csrf
@@ -68,34 +65,36 @@
             <div class="col-md-4 order-md-2 mb-4">
                 <h4 class="d-flex justify-content-between align-items-center mb-3">
                     <span class="text-muted">Your cart</span>
-                    <span class="badge badge-secondary badge-pill">{{Cart::count()}}</span>
+                    @php $total = 0 @endphp
+                    @foreach((array) session('cart') as $id => $details)
+                        @php $total += $details['quantity'] @endphp
+                    @endforeach
+                    <span class="badge badge-secondary badge-pill">{{ $total}}</span>
                 </h4>
 
                 <ul class="list-group mb-3 product">
-                    @foreach(Cart::content() as $items)
-                    <li class="list-group-item d-flex justify-content-between lh-condensed">
+                    @if(session('cart'))
+                    @foreach(session('cart') as $id => $details)
+                   <li class="list-group-item d-flex justify-content-between lh-condensed">
                         <div>
                             <h6 class="my-0">Tên sản phẩm :</h6>
-                            <small class="text-muted">{{$items->name}}</small>
+                            <small class="text-muted">{{$details['name']}}</small>
                             <br>
-                            <small class="text-muted"> số lượng :{{$items->qty}}</small>
+                            <small class="text-muted"> số lượng :{{$details['quantity']}}</small>
                         </div>
-                        <a class="backdetail" href="{{URL::to('/details',[$items->id])}}"><img width="70px" src="{{$items->options[0]}}" alt=""></a>
-                        <span class="text-muted">{{$items->subTotal(0)}} đ</span>
+                        <a class="backdetail" href="{{URL::to('/details',[$details['name']])}}"><img width="70px" src="{{$details['options'][0]}}" alt=""></a>
+                        <span class="text-muted">{{number_format($details['price'])}} đ</span>
 
                     </li>
                     @endforeach
-                    <li class="list-group-item d-flex justify-content-between bg-light">
-                        <div class="text-success">
-                            <h6 class="my-0">Giảm(5%):</h6>
-
-                        </div>
-                        <span class="text-success">{{Cart::tax(0)}}</span>
-                    </li>
-
+                    @endif
                     <li class="list-group-item d-flex justify-content-between">
                         <span>Tổng phải thanh toán</span>
-                        <strong>{{Cart::total(0)}} đ</strong>
+                        @php $total = 0 @endphp
+                        @foreach((array) session('cart') as $id => $details)
+                            @php $total +=  $details['price'] * $details['quantity'] @endphp
+                        @endforeach
+                        <strong>{{ number_format($total) }} đ</strong>
                     </li>
                 </ul>
 

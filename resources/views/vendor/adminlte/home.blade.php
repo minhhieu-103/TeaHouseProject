@@ -73,14 +73,13 @@
 
     </section>
 
-    <div class="row">
-        <div class="col-sm-8">
+        <div class="col-sm-8 col-lg-8">
             <figure class="highcharts-figure">
                 <div id="container2" data-day="{{$viewData['listDay']}}" data-money="{{$viewData['arrRevenueProduct']}}" data-money-default="{{$viewData['arrRevenueProductDefault']}}"</div>
 
             </figure>
         </div>
-        <div class="col-sm-4">
+        <div class="col-sm-4 col-lg-4">
             <figure class="highcharts-figure">
                 <div id="container" data-json="{{$viewData['statusChart']}}"></div>
 
@@ -206,7 +205,7 @@
 
                 <!-- /.box-body -->
                 <div class="box-footer text-center">
-                    <a href="javascript:void(0)" class="uppercase">View All Products</a>
+                    <a href="admin/products" class="uppercase">View All Products</a>
                 </div>
                 <!-- /.box-footer -->
             </div>

@@ -35,7 +35,6 @@ class AdminController extends Controller
 
 
         $listday = DateHelper::getListDayInMonth();
-//        dd($listday);
         //danh sach so san pham xem nhieu
         $topProduct = Product::orderByDesc('id')->limit(9)->get();
         //trang thai don hang

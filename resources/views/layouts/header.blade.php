@@ -63,7 +63,11 @@
                                             <div class="icon_hotline">
                                                 <i>
                                                     <img src="//bizweb.dktcdn.net/100/415/010/themes/806477/assets/i_cart.png?1612509872226" alt="Template Tea House">
-                                                    <span class="count_item count_item_pr">{{Cart::count()}}</span>
+                                                    @php $total = 0 @endphp
+                                                    @foreach((array) session('cart') as $id => $details)
+                                                        @php $total += $details['quantity'] @endphp
+                                                    @endforeach
+                                                    <span class="count_item count_item_pr">{{$total}}</span>
                                                 </i>
 
                                                 <span class="bolds cartext hidden-xs">Giỏ hàng</span>
@@ -184,6 +188,7 @@
                                              <div class="icon_hotline">
                                                  <i>
                                                      <img src="//bizweb.dktcdn.net/100/415/010/themes/806477/assets/i_cart.png?1612509872226" alt="Template Tea House">
+
                                                      <span class="count_item count_item_pr">{{Cart::count()}}</span>
                                                  </i>
 
