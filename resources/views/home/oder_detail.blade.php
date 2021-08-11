@@ -78,11 +78,7 @@
                                         <div class="clearfix form-group ">
                                             <div class="custom custom-btn-number show">
                                                 <label class="sl section">Số lượng:</label>
-                                                <div class="custom input_number_product custom-btn-number form-control">
-                                                    <button class="btn_num num_1 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro ) &amp;&amp; qtypro > 2 ) result.value--;return false;" type="button"><i class="fas fa-minus"></i></button>
-                                                    <input type="text" id="qtym" name="quantity" value="{{$products->qty}}" maxlength="3" class="form-control prd_quantity" onkeypress="if ( isNaN(this.value + String.fromCharCode(event.keyCode) )) return false;" onchange="if(this.value == 0)this.value=1;">
-                                                    <button class="btn_num num_2 button button_qty" onclick="var result = document.getElementById('qtym'); var qtypro = result.value; if( !isNaN( qtypro )) result.value++;return false;" type="button"><i class="fas fa-plus"></i></button>
-                                                </div>
+                                                <td style="margin-left: 2px"><input class="text-center form-control" type="number"value="1"min="1" max="50"></td>
                                             </div>
                                             <div class="btn-mua button_actions clearfix">
                                                 <button type="submit"  href="{{route('add-cart',[$products->id])}}" class="btn btn_base normal_button btn_add_cart add_to_cart btn-cart" data-id="{{$products->id}}">

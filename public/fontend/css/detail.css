@@ -16,10 +16,12 @@
     width: 100%;
     text-align: left;
 }
+
 img.lazyload.img-responsive.mx-auto.d-block.loaded {
     border: 1px solid navajowhite;
     border-top: 1px solid;
 }
+
 .margin-bottom-20 {
     margin-bottom: 20px !important;
 }
@@ -202,6 +204,7 @@ img.lazyload.img-responsive.mx-auto.d-block.loaded {
     line-height: 30px;
     font-family: cursive;
     display: inline-block;
+    border: none;
 }
 
 .form-group .input_number_product {
